@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+
+/* Force the scroll bar for the entire page */
+html, body {
+    overflow-y: scroll; /* This forces a vertical scroll bar even when not needed */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    height: 100%;
+}
+
 /* General styling */
 body {
     font-family: Arial, sans-serif;
@@ -107,14 +115,6 @@ body {
     background-color: #c63c13;
 }
 
-/* Footer styling */
-footer {
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
 /* Services section styling */
 .services {
     padding: 4rem 2rem;
@@ -180,3 +180,106 @@ footer {
     padding: 10px;
     cursor: pointer;
 }
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e64a19;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #c63c13;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #services-list div {
+        width: 48%; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #services-list div {
+        width: 100%; /* Stack cards vertically for very small screens */
+    }
+}
+
+/* Grid Container Styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Grid Item Styling */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Text and Button Styling */
+.overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.button {
+    background-color: #e64a19;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    background-color: #c63c13;
+}
+
+/* Footer styling */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+

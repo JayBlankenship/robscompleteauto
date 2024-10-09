@@ -61,17 +61,14 @@
     <p>At Rob's Complete Auto Repair you can enjoy affordable auto repair services in Algonquin, Illinois. With over 30 years of experience, we have built a reputation for providing honest and reliable maintenance services. Our commitment to excellent customer service ensures that you'll continue to choose us for all your auto repair needs. We offer fast service and on-time deliveries, and you can call us today for a free, same-day estimate or ask us to beat a competitor's estimate. Call today at <strong>847-458-0444!</strong></p>
 </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Rob's Complete Auto Repair. All rights reserved.</p>
-    </footer>
+
 <!-- Add this inside your body, right after the closing tag of your content -->
 <a href="#mapSection" class="google-map-button">G</a>
 
 <!-- The map section (hidden by default, shown when clicked) -->
 <section id="mapSection" class="google-map-section">
     <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093705!2d144.95373531585425!3d-37.816279379751604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43a6b992ab%3A0x5045675218ce7e0!2sYour+Shop+Location!5e0!3m2!1sen!2sus!4v1600282306186!5m2!1sen!2sus" 
+        src="https://www.google.com/maps?q=1045%20w%20algonquin%20rd%20c%20algonquin%20il%2060102" 
         width="600" 
         height="450" 
         style="border:0;" 
@@ -82,7 +79,7 @@
 </section>
     <script src="script.js"></script>
 </body>
-</html>
+
 <script>
     const mapButton = document.querySelector('.google-map-button');
     const mapSection = document.querySelector('.google-map-section');
@@ -99,3 +96,127 @@
         }
     });
 </script>
+
+<!-- Services Section with Cards -->
+<section id="services-list" style="background-color: #fff; padding: 2rem 0;">
+    <div style="text-align: center;">
+        <h2>Our Services</h2>
+        <p>At Rob's Complete Auto Repair you can enjoy affordable auto repair services in Algonquin, Illinois. With over 30 years of experience, we have built a reputation for providing honest and reliable maintenance services. Our commitment to excellent customer service ensures that you'll continue to choose us for all your auto repair needs. We offer fast service and on-time deliveries, and you can call us today for a free, same-day estimate or ask us to beat a competitor's estimate. Call today at <strong>847-458-0444!</strong></p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2rem;">
+        <!-- Service Card 1 -->
+        <div style="width: 24%; text-align: center; margin-bottom: 2rem;">
+            <img src="oil-filter.jpg" alt="Oil & Filter Change" style="max-width: 100%; border-radius: 8px;">
+            <h3>Oil & Filter Change</h3>
+            <p>Periodic oil and lubricant changes are best for the smooth and efficient functioning of your vehicle. Visit us today!</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        <!-- Service Card 2 -->
+        <div style="width: 24%; text-align: center; margin-bottom: 2rem;">
+            <img src="general-auto-repair.jpg" alt="General Auto Repair" style="max-width: 100%; border-radius: 8px;">
+            <h3>General Auto Repair</h3>
+            <p>Whether you need routine maintenance, brake repair, transmission service, or any other auto repair service, we're here to help.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        <!-- Service Card 3 -->
+        <div style="width: 24%; text-align: center; margin-bottom: 2rem;">
+            <img src="auto-diagnostics.jpg" alt="Auto Diagnostics" style="max-width: 100%; border-radius: 8px;">
+            <h3>Auto Diagnostics</h3>
+            <p>If you suspect that your car or truck is experiencing issues, bring it to our shop for a comprehensive diagnostic assessment.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        <!-- Service Card 4 -->
+        <div style="width: 24%; text-align: center; margin-bottom: 2rem;">
+            <img src="engine-rebuilds.jpg" alt="Engine Rebuilds" style="max-width: 100%; border-radius: 8px;">
+            <h3>Engine Rebuilds</h3>
+            <p>Your vehicle's engine is undoubtedly one of its most crucial components, and our professionals can help with any related issues.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid Section -->
+<section id="services-grid" style="padding: 2rem 0; background-color: #fff;">
+    <div class="grid-container" id="grid-container">
+        <!-- The grid items will be injected here by JavaScript -->
+    </div>
+</section>
+
+
+</html>
+<!-- Services Grid Section -->
+<section id="services-grid" style="padding: 2rem 0; background-color: #fff;">
+    <div class="grid-container" id="grid-container"></div>
+</section>
+
+<script>
+    // Array of service items
+    const services = [
+    {
+        title: "Oil & Filter Change",
+        img: "oil-filter.jpg",
+        alt: "Oil & Filter Change",
+        link: "#oil-filter"
+    },
+    {
+        title: "General Auto Repair",
+        img: "general-auto-repair.jpg",
+        alt: "General Auto Repair",
+        link: "#general-auto-repair"
+    },
+    {
+        title: "Auto Diagnostics",
+        img: "auto-diagnostics.jpg",
+        alt: "Auto Diagnostics",
+        link: "#auto-diagnostics"
+    },
+    {
+        title: "Engine Rebuilds",
+        img: "engine-rebuilds.jpg",
+        alt: "Engine Rebuilds",
+        link: "#engine-rebuilds"
+    }
+];
+
+// Function to shuffle the array randomly
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Get the grid container
+const gridContainer = document.getElementById('grid-container');
+
+// Check if the container exists before proceeding
+if (gridContainer) {
+    // Shuffle the services array and repeat it
+    const shuffledServices = shuffle([...services, ...services, ...services]);
+
+    // Create grid items dynamically and append them to the container
+    shuffledServices.forEach(service => {
+        const gridItem = `
+            <div class="grid-item">
+                <a href="${service.link}">
+                    <img src="${service.img}" alt="${service.alt}">
+                    <div class="overlay">
+                        <h3>${service.title}</h3>
+                        <span class="button">Learn More</span>
+                    </div>
+                </a>
+            </div>
+        `;
+        gridContainer.innerHTML += gridItem;
+    });
+} else {
+    console.error("Grid container not found");
+}
+</script>
+<!-- Use a simple link that opens in a new tab -->
+<a href="https://maps.app.goo.gl/RgbGPb1JgJxb3ZME8" target="_blank" class="google-map-button">G</a>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Rob's Complete Auto Repair. All rights reserved.</p>
+</footer>
