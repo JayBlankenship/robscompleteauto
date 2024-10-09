@@ -1,0 +1,116 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Top bar contact info */
+.top-bar {
+    background-color: #e64a19;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: right;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #e64a19;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #e64a19;
+}
+
+/* Hero section styling */
+.hero {
+    background-color: #e64a19;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+}
+
+.hero-content a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Services section styling */
+.services {
+    padding: 4rem 2rem;
+    background: url('repair-shop.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #e64a19;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #c63c13;
+}
+
+/* Footer styling */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
