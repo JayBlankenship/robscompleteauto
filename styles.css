@@ -114,3 +114,17 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+/* Services section styling */
+.services {
+    padding: 4rem 2rem;
+    background: url('repair-shop.jpg') no-repeat center center;
+    background-size: contain; /* Ensure the entire image is visible */
+    text-align: center;
+    color: #fff;
+    height: 500px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
