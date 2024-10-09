@@ -128,3 +128,55 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+/* Floating button style */
+.google-map-button {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.google-map-button:hover {
+    background-color: #357ae8;
+}
+
+/* Map section style */
+.google-map-section {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-map-section iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+    background: white;
+}
+
+/* Close map button */
+.close-map-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
